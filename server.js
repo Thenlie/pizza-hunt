@@ -9,6 +9,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pizza-hunt', {
+  auth: {
+    user: leithen,
+    password: qazWSXedcRFV
+  },
   useNewUrlParser: true,
   useUnifiedTopology: true  
 });
